@@ -1,0 +1,35 @@
+"geben sie eine Zahl ein:"
+inc 8
+
+#output string
+lit 0
+lit 24
+lit 25
+out 2 #out string
+
+la 0 32
+la 0 36
+in 0
+
+la 0 36
+lit 0
+sto
+
+.loop
+la 0 36
+lv 0 36
+lit 1
+add
+sto
+
+lv 0 36
+lit 1
+out 0
+
+lv 0 32
+lv 0 36
+rel 2
+fjmp .loop
+
+out 3
+halt

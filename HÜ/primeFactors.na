@@ -1,0 +1,80 @@
+"enter an int:entered negative number"
+inc 12
+
+lit 0
+lit 13
+lit 14
+out 2
+
+la 0 32
+la 0 36
+in 0
+
+
+# is entered value is smaller than one?
+lv 0 32
+lit 1
+rel 0
+tjmp .print
+
+# is entered value 1?
+lv 0 32
+lit 1
+rel 2
+tjmp .isone
+
+#set divisor
+la 0 36
+lit 2
+sto
+
+.div
+lv 0 32
+lv 0 36
+mod
+lit 0
+rel 2
+fjmp .plus_one_div
+
+la 0 32
+lv 0 32
+lv 0 36
+div
+sto
+
+lv 0 36
+lit 1
+out 0
+out 3
+
+lv 0 32
+lit 1
+rel 2
+fjmp .div
+
+jmp .end
+
+.plus_one_div
+la 0 36
+lv 0 36
+lit 1
+add
+sto
+jmp .div
+
+.print
+lit 13
+lit 36
+lit 37
+out 2
+jmp .end
+
+.isone
+lit 1
+lit 1
+out 0
+jmp .end
+
+.end
+out 3
+halt

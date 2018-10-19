@@ -1,0 +1,41 @@
+"Enter an int:percantage"
+inc 12
+
+#enter an int:
+lit 0
+lit 13
+lit 14
+out 2
+
+la 0 32
+la 0 36
+in 0
+
+#enter an int
+lit 0
+lit 13
+lit 14
+out 2 #stirng
+
+la 0 36
+la 0 40
+in 0
+
+la 0 40
+lit 100
+lv 0 32
+div
+lv 0 36
+mul
+sto
+
+lit 13
+lit 23
+lit 24
+out 2
+
+lv 0 40
+lit 1
+out 0 #int
+out 3 #leerzeile
+halt
